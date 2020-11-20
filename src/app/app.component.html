@@ -1,0 +1,15 @@
+
+<div class="container">
+  <div class="header">
+    <input type="text" [(ngModel)]="inputValue">
+    <button (click)="addCard()">Add card</button>
+  </div>
+  
+  <div *ngFor="let card of cardCounter; let i = index">
+    <app-card [cardCounter]="cardCounter" [id]="i" [name]="card"></app-card> 
+  </div>
+  
+  
+</div>
+
+<router-outlet></router-outlet>
